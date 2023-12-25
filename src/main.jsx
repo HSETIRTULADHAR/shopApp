@@ -17,6 +17,8 @@ import '././assets/css/style.min.css';
 
 import Home from './home/Home.jsx'
 import Blog from './blog/Blog.jsx'
+import Shop from './shop/Shop.jsx'
+import About from './about/About.jsx'
 
 
 const router = createBrowserRouter([
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog />
+      },
+      {
+        path: '/shop',
+        element: <Shop />
+      },
+      {
+        path: '/about',
+        element: <About />
       }
     ]
   }

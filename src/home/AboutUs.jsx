@@ -30,7 +30,7 @@ const AboutUs = () => {
     <div className='instructor-section style-2 padding-tb section-bg-ash'>
       <div className='container'>
         <div className='section-wrapper'>
-            <div className='row'>
+            <div className='row g-4 justify-content-center align-items-center row-cols-1 row-cols-md-2 row-cols-lg-3'>
                 <div className='col'>
                     {countList.map((val,i) => (
                         <div key={i} className='count-item'>

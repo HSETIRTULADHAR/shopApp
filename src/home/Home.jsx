@@ -5,6 +5,8 @@ import CategoryShowcase from './CategoryShowcase'
 import Register from './Register'
 import LocationSpread from './LocationSpread'
 import AboutUs from './AboutUs'
+import AppSection from './AppSection'
+import Sponser from './Sponser'
 
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
       <Register />
       <LocationSpread />
       <AboutUs />
+      <AppSection />
+      <Sponser />
     </div>
   )
 }
