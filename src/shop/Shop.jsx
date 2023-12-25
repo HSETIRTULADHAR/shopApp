@@ -3,6 +3,9 @@ import PageHeader from '../components/PageHeader'
 import Data from '../products.json'
 import ProductCards from './ProductCards'
 import Pagination from './Pagination'
+import Search from './Search'
+import ShopCategory from './ShopCategory'
+
 const showResults = 'Showing 01 - 12 of 139 Results'
 const Shop = () => {
     const [gridList ,setGridList] = useState(true);
@@ -19,6 +22,21 @@ const Shop = () => {
 
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber)
+    }
+
+    //filter products based on catetgory
+
+    const [selectedCategory, setSelectedCategory] = useState("All");
+    const menuItems = [...new Set(Data.map((Val) => Val.category))];
+    console.log("Menu items = ",menuItems);
+
+    const filterItem  = (curcat) => {
+        const newItem = Data.filter((newVal) => {
+            return newVal.category === curcat;
+        })
+
+        setSelectedCategory(curcat);
+        setProducts(newItem);
     }
 
   return (
@@ -61,12 +79,21 @@ const Shop = () => {
                     {/*Right col*/}
 
                     <div className='col-lg-4 col-12'>
-
+                        <aside>
+                            <Search products={products} gridList={gridList}/>
+                            <ShopCategory 
+                                filterItem={filterItem}
+                                setItem = {setProducts}
+                                setProducts = {setProducts}
+                                menuItems={menuItems}
+                                selectedCategory= {selectedCategory}
+                                />
+                        </aside>
                     </div>
 
                 </div>
 
-            </div>
+            </div> 
 
         </div>
     </div>
