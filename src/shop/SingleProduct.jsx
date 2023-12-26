@@ -17,12 +17,8 @@ import ProductDisplay from './ProductDisplay';
 const SingleProduct = () => {
     const [product, setProduct] = useState([]);
     const {id} = useParams();
-
-    useEffect(( ) => {
-        fetch('src/products.json')
-            .then(res => res.json())
-            .then(data => setProduct(data))
-    },[]); 
+    setProduct(data);
+   
 
     
     const singleItem = product.filter((val) => val.id === id);
