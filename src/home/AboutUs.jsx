@@ -11,7 +11,7 @@ const countList = [
     {
     iconName: 'icofont-users-alt-4',
     count: '12600',
-    text: 'Marchant Enrolled',
+    text: 'Merchant Enrolled',
     },
     {
     iconName: 'icofont-graduate-alt',

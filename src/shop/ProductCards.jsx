@@ -36,7 +36,7 @@ const ProductCards = ({gridList, products}) => {
                             </Link>
                         </h5>
                         <p className='productRating'>
-                            <Ratings />
+                            <Ratings ratingCount={product.ratings} />
                         </p>
                         <h6>
                             ${product.price}
