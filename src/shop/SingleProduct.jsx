@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import PageHeader from '../components/PageHeader';
-
+import data from '../products.json';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
